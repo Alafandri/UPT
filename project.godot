@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="UPT"
+run/main_scene="uid://b2rmg3s2lx41a"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://Art/Other/icon.svg"
 
