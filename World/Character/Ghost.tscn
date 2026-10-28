@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://d2p4wwuyvpmuk" path="res://Code/Character/ghost.gd" id="1_q4tjh"]
 [ext_resource type="Texture2D" uid="uid://d22hu4xq7yvbf" path="res://Art/Character/ghostsheet.png" id="2_dhxi5"]
+[ext_resource type="Texture2D" uid="uid://bcoavtgwp042t" path="res://Art/Particles/smoke_07.png" id="3_nkagn"]
+[ext_resource type="Texture2D" uid="uid://bbhtu2imida6y" path="res://Art/Particles/smoke_04.png" id="4_c1s4c"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0oyd5"]
 atlas = ExtResource("2_dhxi5")
@@ -276,8 +278,6 @@ turbulence_influence_max = 1.0
 turbulence_initial_displacement_min = -100.0
 turbulence_initial_displacement_max = 100.0
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6fk0d"]
-
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_b4non"]
 lifetime_randomness = 0.42
 particle_flag_disable_z = true
@@ -405,6 +405,7 @@ z_index = -1
 position = Vector2(0, 27)
 emitting = false
 amount = 5
+texture = ExtResource("3_nkagn")
 lifetime = 0.34
 one_shot = true
 explosiveness = 1.0
@@ -416,7 +417,7 @@ z_index = -1
 position = Vector2(0, 27)
 emitting = false
 amount = 22
-texture = SubResource("CompressedTexture2D_6fk0d")
+texture = ExtResource("3_nkagn")
 lifetime = 0.4
 explosiveness = 1.0
 process_material = SubResource("ParticleProcessMaterial_b4non")
@@ -425,7 +426,8 @@ process_material = SubResource("ParticleProcessMaterial_b4non")
 z_index = -1
 position = Vector2(1, 2)
 emitting = false
-amount = 100
+amount = 20
+texture = ExtResource("3_nkagn")
 lifetime = 0.4
 process_material = SubResource("ParticleProcessMaterial_2swuo")
 
@@ -441,5 +443,6 @@ modulate = Color(1, 1, 1, 0.23921569)
 position = Vector2(-1, 19)
 emitting = false
 amount = 12
+texture = ExtResource("4_c1s4c")
 lifetime = 0.48
 process_material = SubResource("ParticleProcessMaterial_2kljp")
