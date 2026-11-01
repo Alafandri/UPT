@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://blsahj743lgfb"]
+
+[ext_resource type="Script" uid="uid://drjcw41apnexs" path="res://Code/Other/enemy_1.gd" id="1_nghdw"]
+[ext_resource type="Texture2D" uid="uid://b35f1g312rqyi" path="res://Art/Other/icon.svg" id="2_22ahx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
+radius = 4.472136
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yf5fn"]
+
+[node name="Enemy" type="CharacterBody2D" unique_id=56361959]
+script = ExtResource("1_nghdw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1631312626]
+shape = SubResource("CircleShape2D_g4v7s")
+
+[node name="DamageArea" type="Area2D" parent="." unique_id=1259417141]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageArea" unique_id=1595029669]
+shape = SubResource("CircleShape2D_yf5fn")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=806456648]
+position = Vector2(1.1920929e-07, 2.3841858e-07)
+scale = Vector2(0.11281249, 0.11281249)
+texture = ExtResource("2_22ahx")
+
+[connection signal="body_entered" from="DamageArea" to="." method="_on_damage_area_body_entered"]

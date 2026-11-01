@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://crh0sxpw3is44"]
+
+[ext_resource type="Texture2D" uid="uid://b35f1g312rqyi" path="res://Art/Other/icon.svg" id="1_kokeh"]
+
+[node name="Heart" type="TextureRect" unique_id=768151292]
+texture = ExtResource("1_kokeh")

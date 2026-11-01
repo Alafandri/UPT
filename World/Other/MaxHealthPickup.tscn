@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bv7j8yu7u8kud"]
+
+[ext_resource type="Script" uid="uid://jyxwtudmto4x" path="res://Code/Other/max_health_pickup.gd" id="1_boyxj"]
+[ext_resource type="Texture2D" uid="uid://b35f1g312rqyi" path="res://Art/Other/icon.svg" id="1_ihgst"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+
+[node name="MaxHealthPickup" type="Area2D" unique_id=521191437]
+script = ExtResource("1_boyxj")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=945393606]
+scale = Vector2(0.1953125, 0.1953125)
+texture = ExtResource("1_ihgst")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1688231102]
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
